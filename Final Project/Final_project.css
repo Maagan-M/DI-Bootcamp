@@ -1,101 +1,100 @@
 body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/langfr-1920px-Flag_of_Israel.svg.png");
-    background-size: cover;
-  }
-  .left-image,
-  .right-image {
-    position: fixed;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    z-index: -1;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 15px; /* Ajout d'un peu plus d'espacement */
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px; /* Réduction de la taille de la police */
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #ffcc00;
-  }
-  
-  article {
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  section {
-    margin-bottom: 40px; /* Augmentation de la marge pour #photo */
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-  }
-  
-  figcaption {
-    text-align: center;
-    font-style: italic;
-    font-size: 14px;
-  }
-  /* Nouveau style pour le bouton Wikipedia */
-  .wiki-button {
-    display: inline-block;
-    padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/langfr-1920px-Flag_of_Israel.svg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #444;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px; 
+  transition: color 0.3s ease;
+}
+
+article {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 40px
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.video-container {
+display: flex;
+justify-content: center;
+}
+
+.wiki-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.wiki-button:hover {
+  background-color: #0056b3;
+}
+
+button {
     background-color: #007bff;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+    border: none;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
     transition: background-color 0.3s ease;
-  }
-  
-  .wiki-button:hover {
+}
+button:hover {
     background-color: #0056b3;
-  }
-  button {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 10px 20px; 
-      font-size: 16px; 
-      border-radius: 5px; 
-      cursor: pointer; 
-      transition: background-color 0.3s ease;
-  }
-  button:hover {
-      background-color: #0056b3;}
