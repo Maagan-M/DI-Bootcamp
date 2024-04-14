@@ -1,0 +1,47 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Mock 2</title>
+    
+</head>
+<body>
+    <div class="heading"></div>
+    <div class="col col-left"></div>
+    <div class="col col-mid"></div>
+    <div class="col col-right"></div>
+</body>
+</html>
+
+<style type="text/css">
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin-left: 10px;
+  }
+  div {
+    border: 3px solid black;
+  }
+  .col {
+    height:400px;
+    width:32%;
+    margin-left:1%;
+    display: inline-block;
+  }
+  .heading {
+    background: purple;
+    width: 98.5%;
+    height: 200px;
+    margin-bottom: 30px;
+  }
+  .col-left {
+    background-color: maroon;
+    margin-left: 0;
+  }
+  .col-mid {
+    background-color: lightgreen;
+  }
+  .col-right {
+    background-color: orange;
+  }
