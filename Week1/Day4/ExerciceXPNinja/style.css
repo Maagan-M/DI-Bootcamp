@@ -1,0 +1,116 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.column {
+    display: flex;
+    height: 100%;
+}
+.left, .right {
+flex: 1;
+padding: 20px;
+}
+.left {
+    background-color: #f0f0f0;
+    color: grey;
+}
+.right {
+    background-color: #8A2BE2;
+    background-image: linear-gradient(135deg, #8A2BE2 50%, #6A5ACD 100%);
+    color: white;
+}
+h2 {
+    color: black;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #6A5ACD;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
+.container {
+  padding: 16px;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.tiret {
+    max-width: 600px; 
+    margin: 0 auto; 
+  }
+  
+  .one {
+    position: relative; 
+  }
+  
+  .one::before,
+  .one::after {
+    content: ""; 
+    position: absolute; 
+    top: 50%; 
+    width: 25%; 
+    height: 1px;
+    background-color: grey;
+  }
+  
+  .one::before {
+    left: 0; 
+    transform: translateX(-18%); 
+  }
+  
+  .one::after {
+    right: 0; 
+    transform: translateX(18%); 
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+  }
+  .social a {
+    margin: 0 10px;
+  }
+  .social a i {
+font-size: 24px;
+color: grey;
+  }
+.copyright {
+    font-size: 10px;
+    margin-top: 30px;
+}
+.profile {
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  .two {
+    color: white;
+  }
+  .register {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: transparent;
+    color: #fff; 
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+  }
