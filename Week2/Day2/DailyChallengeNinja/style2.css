@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 400px; 
+    height: 400px;
+    border: 2px solid black;
+  }
+  
+  .cell {
+    border: 2px solid white;
+  }
+
+  .lightgrey {
+    background-color: lightgrey;
+  }
+  
+  .darkgrey {
+    background-color: darkgray;
+  }
+
+  .lightblack {
+    background-color: gray;
+  }
+
+  .darkblack {
+    background-color: black;
+  }
