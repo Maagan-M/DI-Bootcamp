@@ -1,4 +1,4 @@
-body {
+html, body {
     margin: 0;
   }
   .top ul {
@@ -40,6 +40,7 @@ body {
       color: white;
       text-align:center;
       font-size: 10px;
+      margin-top: 20px;
     }
 
     .products {
@@ -67,4 +68,66 @@ body {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    button {
+      color: gray;
+      background-color: white;
+      border: 1px solid gainsboro;
+      padding: 3px;
+    }
+
+    .products h3 {
+      font-size: 15px;
+    }
+
+    img {
+      width: 197.59px;
+      height: 204px;
+    }
+
+    .div1 {
+      position: relative;
+    }
+
+    .p1 {
+      position: absolute;
+      top: 10px; 
+      left: 50px;
+      width: 30px; 
+      height: 30px; 
+      border-radius: 50%; 
+      background-color: green; 
+      color: #ffffff; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 10px;
+    }
+
+    .p2 {
+      position: absolute;
+      top: 10px; 
+      right: 50px;
+      width: 30px; 
+      height: 30px; 
+      border-radius: 50%; 
+      background-color: red; 
+      color: #ffffff; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 10px;
+    }
+    
+    .color {
+      color:aquamarine;
+      font-size: 15px;
+    }
+
+    .small {
+      font-size: 10px;
+      color:gainsboro;
     }
