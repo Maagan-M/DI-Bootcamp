@@ -1,0 +1,13 @@
+html, body {
+    padding: 10px;
+}
+
+.col-md-3 {
+    height: 220px;
+    width: 180px;
+}
+
+img {
+    width: 100px;
+    height: 75px;
+}
