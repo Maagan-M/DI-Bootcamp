@@ -1,5 +1,5 @@
 //Store a celsius temperature into a variable.
-const celsiusTemp = 20;
+const celsiusTemp = 20
 
 //Convert it to fahrenheit and console.log <temperature>°C is <temperature>°F.
 //Hint : Should you create another variable to hold the temperature in fahrenheit? (ie. point 2)
