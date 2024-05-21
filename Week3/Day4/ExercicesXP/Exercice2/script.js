@@ -12,7 +12,7 @@ console.log(newDog.toLowerCase())
 //if it does, display ‘I love Chihuahuas, it’s my favorite dog breed’
 //else, console.log ‘I dont care, I prefer cats’
 if (newDog === "Chihuahua"){
-    console.log("I love Chihuahua, it's my favorite dog breed")
+    console.log("I love Chihuahuas, it's my favorite dog breed")
 } else {
     console.log("I don't care, I prefer cats")
 }
