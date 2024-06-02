@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Color</title>
+</head>
+<body>
+    <form>
+        <select id="colorSelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Black</option>
+        </select>
+        <input type="button" value="Select and Remove" id="removeButton">
+    </form>
+
+    <script>
+        //Function to remove the selected color from the dropdown list
+        function removecolor() {
+            const selectElement = document.getElementById('colorSelect');
+            selectElement.remove(selectElement.selectedIndex);
+        }
+
+        //Add click event listener to the button
+        document.getElementById('removeButton').addEventListener('click', removecolor);
+    </script>
+</body>
+</html>
