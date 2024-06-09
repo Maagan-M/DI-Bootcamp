@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The spot that suits you...</h1>
+        <form id="activity-form">
+            <label for="city">Choose your city:</label>
+            <select id="city" name="city">
+                <option value="telaviv">Tel Aviv</option>
+                <option value="jerusalem">Jerusalem</option>
+                <option value="haifa">Haifa</option>
+                <option value="akko">Akko</option>
+                <option value="hadera">Hadera</option>
+                <option value="beersheva">Beer Sheva</option>
+                <option value="ashdod">Ashdod</option>
+                <option value="eilat">Eilat</option>
+            </select>
+
+            <label for="activity-type">Choose your activity:</label>
+            <select id="activity-type" name="activity-type">
+                <option value="mall">Malls</option>
+                <option value="touristic">Touristic sites</option>
+                <option value="archeology">Archeological sites</option>
+                <option value="trails">Trails</option>
+                <option value="religious">Religious sites</option>
+            </select>
+
+            <button type="button" onclick="searchActivities()">Search</button>
+        </form>
+        <div id="results" class="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
