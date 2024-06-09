@@ -166,9 +166,6 @@ const activities = [
     { city: 'eilat', type: 'archeology', name: 'Eilat Promenade', description: '', image: '' }
 ];
 
-export default activities;
-
-
 function searchActivities() {
     const city = document.getElementById('city').value;
     const activityType = document.getElementById('activity-type').value;
