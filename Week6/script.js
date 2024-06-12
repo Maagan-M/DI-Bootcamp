@@ -10,8 +10,8 @@ const activities = [
     { city: 'telaviv', type: 'trails', name: 'Pardesim Stream', image: '' },
     { city: 'telaviv', type: 'religious', name: 'Beit Hafutsot', image: '' },
     { city: 'telaviv', type: 'mall', name: 'Azraeli Mall', image: '' },
-    { city: 'telaviv', type: 'touristic', name: 'Jaffa', image: '' },
-    { city: 'telaviv', type: 'archeology', name: 'Tell Qasile', image: '' },
+    { city: 'telaviv', type: 'touristic', name: 'Jaffa', image: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Jaffa_Clock_Tower%2C_2019_%2803%29.jpg' },
+    { city: 'telaviv', type: 'archeology', name: 'Tel Qasile', image: 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Qassila_078.jpg' },
     { city: 'telaviv', type: 'trails', name: 'Park Hamesila', image: '' },
     { city: 'telaviv', type: 'religious', name: 'Yitshak Rabin Center', image: '' },
     { city: 'telaviv', type: 'mall', name: 'Ramat Aviv Mall', image: '' },
@@ -211,3 +211,22 @@ function searchActivities() {
             resultsContainer.appendChild(resultItem);
         });
 }
+
+document.getElementById('close-image-modal').addEventListener('click', function() {
+    document.getElementById('image-modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    const imageModal = document.getElementById('image-modal');
+    if (event.target == imageModal) {
+        imageModal.style.display = 'none';
+    }
+});
+
+document.getElementById('results').addEventListener('click', function(event) {
+    if (event.target.tagName === 'IMG') {
+        const enlargedImg = document.getElementById('enlarged-img');
+        enlargedImg.src = event.target.src;
+        document.getElementById('image-modal').style.display = 'block';
+    }
+});
