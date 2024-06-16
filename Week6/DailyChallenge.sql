@@ -28,4 +28,11 @@
 --INSERT INTO actors (first_name, last_name, age, number_oscars)
 --VALUES('George','Clooney','06/05/1961', 2);
 
-SELECT * FROM actors;
+--SELECT * FROM actors;
+
+--SELECT COUNT(*) AS total_actors FROM actors;
+
+--INSERT INTO actors (first_name, last_name, age, number_oscars)
+--VALUES ('Brad', 'Pitt', '1963-12-18', 3);
+
+--SELECT * FROM actors;
