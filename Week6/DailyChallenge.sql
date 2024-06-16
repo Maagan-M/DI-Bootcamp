@@ -20,6 +20,12 @@
 -- number_oscars SMALLINT NOT NULL
 --)
 
+--INSERT INTO actors (first_name, last_name, age, number_oscars)
+--VALUES
+--    ('Emma', 'Stone', '1988-11-06', 1),
+--    ('Scarlett', 'Johansson', '1984-11-22', 0),
+--    ('Jennifer', 'Lawrence', '1990-08-15', 1);
+
 --SELECT * FROM actors;
 
 --INSERT INTO actors (first_name, last_name, age, number_oscars)
@@ -30,7 +36,7 @@
 
 --SELECT * FROM actors;
 
---SELECT COUNT(*) AS total_actors FROM actors;
+--SELECT COUNT(*) FROM actors;
 
 --INSERT INTO actors (first_name, last_name, age, number_oscars)
 --VALUES ('Brad', 'Pitt', '1963-12-18', 3);
