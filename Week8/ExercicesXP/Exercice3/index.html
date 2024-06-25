@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+</head>
+<body>
+    <div id="prediction"></div>
+
+<script>
+    (function(numChildren, partnerName, geoLocation, jobTitle) {
+        const sentence = `You will be ${jobTitle} in ${geoLocation}, and married to ${partnerName} with ${numChildren} kids.`;
+        document.getElementById('prediction').innerText = sentence;
+    })(7, 'the ex of your best friend', 'Jerusalem', 'Prime Minister of Israel');
+</script>
+</body>
+</html>
