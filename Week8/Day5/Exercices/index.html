@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quote-section">
+            <p id="quote-display">"Click 'Generate Quote' to get started!"</p>
+            <p id="author-display">— Author</p>
+        </div>
+        <button class="btn" id="generate-quote">Generate Quote</button>
+        
+        <form id="add-quote-form">
+            <input type="text" id="new-quote" placeholder="Enter a new quote" required>
+            <input type="text" id="new-author" placeholder="Enter the author's name" required>
+            <button class="btn" type="submit">Add Quote</button>
+        </form>
+
+        <div class="btn-group">
+            <button class="btn" id="char-count-incl-space">Character Count (incl. spaces)</button>
+            <button class="btn" id="char-count-excl-space">Character Count (excl. spaces)</button>
+            <button class="btn" id="word-count">Word Count</button>
+            <button class="btn" id="like-quote">Like</button>
+        </div>
+
+        <form id="filter-form">
+            <input type="text" id="author-filter" placeholder="Filter by author">
+            <button class="btn" type="submit">Filter Quotes</button>
+        </form>
+
+        <div class="btn-group">
+            <button class="btn" id="previous-quote">Previous</button>
+            <button class="btn" id="next-quote">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
