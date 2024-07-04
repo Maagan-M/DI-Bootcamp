@@ -1,0 +1,55 @@
+body {
+    font-family: 'Anek Latin', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(48, 25, 52, 0.8);
+    background-image: url('circuit-pattern.png');
+    background-size: cover; 
+    background-position: center;
+    margin: 0;
+  }
+  
+  .app {
+    text-align: center;
+  }
+  
+  #searchBox {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }  
+  
+  #robotsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .robot-card {
+    background-color: blue;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .robot-card img {
+    max-width: 100%; 
+    border-radius: 50%;
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
+    object-fit: cover; 
+    background-color: #fff;
+  }
+  
