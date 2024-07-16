@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+    <style>
+        #gifContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .gifCard {
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .gifCard img {
+            width: 100%;
+            height: auto;
+        }
+        .gifCard button {
+            width: 100%;
+            padding: 8px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .gifCard button:hover {
+            background-color: #0056b3;
+        }
+        #deleteAllButton {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        #deleteAllButton:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>GIF Fetcher</h1>
+    <form id="gifForm">
+        <label for="categoryInput">Enter GIF Category:</label>
+        <input type="text" id="categoryInput" required>
+        <button type="submit">Fetch GIFs</button>
+    </form>
+
+    <div id="gifContainer"></div>
+    <button id="deleteAllButton">Delete All GIFs</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
