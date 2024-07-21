@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Wars Characters</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Star Wars Character Info</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-    <button id="get-character-btn">Find someone</button>
-    <div id="character-info">
-        <p id="loading-message"><i class="fas fa-spinner fa-spin"></i> Loading...</p>
-        <p id="error-message" style="display: none;">Oh No! That person isnt available.</p>
-        <div id="character-data">
-            <p id="name"></p>
-            <p id="height"></p>
-            <p id="gender"></p>
-            <p id="birth-year"></p>
-            <p id="home-world"></p>
+    <div class="container">
+        <h1>Star Wars</h1>
+        <button id="random-btn">Find Someone</button>
+        <div id="loading" class="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading...</p>
         </div>
+        <div id="character-info" class="character-info">
+            <p>Name: <span id="character-name"></span></p>
+            <p>Height: <span id="character-height"></span></p>
+            <p>Gender: <span id="character-gender"></span></p>
+            <p>Birth Year: <span id="character-birth-year"></span></p>
+            <p>Home World: <span id="character-home-world"></span></p>
+        </div>
+        <p id="error-message" class="error-message">Oh no! That person is not available.</p>
     </div>
     <script src="script.js"></script>
 </body>

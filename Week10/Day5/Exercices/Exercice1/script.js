@@ -1,42 +1,54 @@
-const getCharacterBtn = document.getElementById('get-character-btn');
+const API_URL = 'https://www.swapi.tech/api/people/';
+const randomBtn = document.getElementById('random-btn');
+const loadingMessage = document.getElementById('loading');
 const characterInfo = document.getElementById('character-info');
-const loadingMessage = document.getElementById('loading-message');
 const errorMessage = document.getElementById('error-message');
-const characterData = document.getElementById('character-data');
-const nameElement = document.getElementById('name');
-const heightElement = document.getElementById('height');
-const genderElement = document.getElementById('gender');
-const birthYearElement = document.getElementById('birth-year');
-const homeWorldElement = document.getElementById('home-world');
+const characterName = document.getElementById('character-name');
+const characterHeight = document.getElementById('character-height');
+const characterGender = document.getElementById('character-gender');
+const characterBirthYear = document.getElementById('character-birth-year');
+const characterHomeWorld = document.getElementById('character-home-world');
 
-getCharacterBtn.addEventListener('click', getRandomCharacter);
+async function fetchCharacter(id) {
+    try {
+        loadingMessage.style.display = 'block';
+        characterInfo.style.display = 'none';
+        errorMessage.style.display = 'none';
 
-function getRandomCharacter() {
-    loadingMessage.style.display = 'block';
-    errorMessage.style.display = 'none';
-    characterData.style.display = 'none';
+        const response = await fetch(`${API_URL}${id}`);
+        if (!response.ok) {
+            throw new Error('Character not found');
+        }
 
-    fetch('https://www.swapi.tech/')
-        .then(response => response.json())
-        .then(data => {
-            const character = data.result.properties;
-            displayCharacterInfo(character);
-        })
-        .catch(error => {
-            console.error(error);
-            errorMessage.style.display = 'block';
-        })
-        .finally(() => {
-            loadingMessage.style.display = 'none';
-        });
+        const data = await response.json();
+        const character = data.result.properties;
+        
+        const homeWorldResponse = await fetch(character.homeworld);
+        const homeWorldData = await homeWorldResponse.json();
+
+        displayCharacter(character, homeWorldData.result.properties.name);
+    } catch (error) {
+        showError();
+    }
 }
 
-function displayCharacterInfo(character) {
-    nameElement.textContent = `Name: ${character.name}`;
-    heightElement.textContent = `Height: ${character.height} cm`;
-    genderElement.textContent = `Gender: ${character.gender}`;
-    birthYearElement.textContent = `Birth Year: ${character.birth_year}`;
-    homeWorldElement.textContent = `Home World: ${character.homeworld}`;
+function displayCharacter(character, homeWorld) {
+    loadingMessage.style.display = 'none';
+    characterInfo.style.display = 'block';
 
-    characterData.style.display = 'block';
+    characterName.textContent = character.name;
+    characterHeight.textContent = character.height;
+    characterGender.textContent = character.gender;
+    characterBirthYear.textContent = character.birth_year;
+    characterHomeWorld.textContent = homeWorld;
 }
+
+function showError() {
+    loadingMessage.style.display = 'none';
+    errorMessage.style.display = 'block';
+}
+
+randomBtn.addEventListener('click', () => {
+    const randomId = Math.floor(Math.random() * 83) + 1; // There are 83 characters in the API
+    fetchCharacter(randomId);
+});
