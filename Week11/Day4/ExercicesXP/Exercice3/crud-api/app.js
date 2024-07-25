@@ -1,22 +1,24 @@
 const express = require('express');
+const { fetchPosts } = require('./data/dataService');
+
 const app = express();
+
 const PORT = 5003;
 
-app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Server is running!');
+});
 
-const dataService = require('./data/dataService');
-
-app.get('/api/posts', async (req, res) => {
-    try {
-        const posts = await dataService.fetchPosts();
-        res.json(posts);
-        console.log('Data successfully retrieved and sent.');
-    } catch (error) {
-        console.error('Error retrieving data:', error);
-        res.status(500).json({ message: 'Internal Server Error' });
-    }
+app.get('/posts', async (req, res) => {
+  try {
+    const posts = await fetchPosts();
+    res.json(posts);
+    console.log('Data has been successfully retrieved and sent as a response.');
+  } catch (error) {
+    res.status(500).send('Error fetching posts');
+  }
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
