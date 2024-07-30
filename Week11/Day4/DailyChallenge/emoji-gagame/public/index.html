@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenge</title>
+</head>
+<body>
+    <h1>Emoji Guessing Game</h1>
+    <form id="guessForm">
+        <div id="emoji"></div>
+        <div id="options"></div>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="feedback"></div>
+    <div id="score"></div>
+    <div id="leaderboard"></div>
+
+    <script>
+        let currentEmojiName = '';
+
+        function loadEmoji() {
+            fetch('/emoji')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('emoji').textContent = data.emoji;
+                    currentEmojiName = data.emojiName;
+                    const optionsDiv = document.getElementById('options');
+                    optionsDiv.innerHTML = '';
+                    data.options.forEach(option => {
+                        const optionButton = document.createElement('button');
+                        optionButton.textContent = option;
+                        optionButton.type = 'button';
+                        optionButton.onclick = () => submitGuess(option);
+                        optionsDiv.appendChild(optionButton);
+                    });
+                });
+        }
+
+        function submitGuess(guess) {
+            const username = prompt('Enter your username:');
+            fetch('/guess', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, emojiName: currentEmojiName, guess }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('feedback').textContent = data.correct ? 'Correct!' : 'Wrong!';
+                document.getElementById('score').textContent = `Score: ${data.score}`;
+                loadEmoji();
+            });
+        }
+
+        function loadLeaderboard() {
+            fetch('/leaderboard')
+                .then(response => response.json())
+                .then(data => {
+                    const leaderboardDiv = document.getElementById('leaderboard');
+                    leaderboardDiv.innerHTML = '<h2>Leaderboard</h2>';
+                    data.forEach(entry => {
+                        const entryDiv = document.createElement('div');
+                        entryDiv.textContent = `${entry.username}: ${entry.score}`;
+                        leaderboardDiv.appendChild(entryDiv);
+                    });
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadEmoji();
+            loadLeaderboard();
+        });
+    </script>
+</body>
+</html>
